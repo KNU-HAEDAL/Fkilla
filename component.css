@@ -22,7 +22,7 @@ a{
 
 /*member sign in*/
 .member{
-    width: 400px;
+    width: 620px;
     /* border: 1px solid #000; */
     margin: auto; /*중앙 정렬*/
     padding: 0 20px;
@@ -33,6 +33,10 @@ a{
     /*로고는 이미지라 인라인 블록이니까 마진 오토 안됨 블록요소만 됨 */
     display: block;
     margin :50px auto;
+}
+
+.member img{
+    width: 75%;
 }
 
 .member .field{
@@ -55,12 +59,20 @@ a{
 
 .member input[type=button],
 .member input[type=submit]{
-background-color: #2db400;
+background-color: #5AAEFF;
 color:#fff
 }
 
+.member button{
+    border:none;
+    width: 100%;
+    height:50px;
+    background-color: #5AAEFF;
+    color:#fff;
+}
+
 .member input:focus, .member select:focus{
-    border: 1px solid #2db400;
+    border: 1px solid #5AAEFF;
 }
 
 .field.birth div{ /*field 이면서 birth*/
@@ -97,50 +109,11 @@ color:#fff
 }
 
 .placehold-text:before{ 
-    content : "@naver.com";
+    content : "@spectacle.com";
     position:absolute; /*before은 inline 요소이기 때문에 span으로 감싸줌 */
     right : 20px;
     top:13px;
     pointer-events: none; /*자체가 가지고 있는 pointer event 를 없애준다 */
-}
-
-.userpw{
-    background:url(./images/images2/icon-01.png) no-repeat center right 15px;
-    background-size: 20px;
-    background-color: #fff;
-}
-
-.userpw-confirm{
-    background:url(./images/images2/icon-02.png) no-repeat center right 15px;
-    background-size: 20px;
-    background-color: #fff;
-}
-
-.member-footer {
-    text-align: center;
-    font-size: 12px;
-    margin-top: 20px;
-}
-
-.member-footer div a:hover{
-    text-decoration: underline;
-    color:#2db400
-}
-
-.member-footer div a:after{
-    content:'|';
-    font-size: 10px;
-    color:#bbb;
-    margin-right: 5px;
-    margin-left: 7px;
-    /*살짝 내려가 있기 때문에 위로 올려주기 위해 transform 사용하기*/
-    display: inline-block;
-    transform: translateY(-1px);
-
-}
-
-.member-footer div a:last-child:after{
-    display: none;
 }
 
 @media (max-width:768px) {
